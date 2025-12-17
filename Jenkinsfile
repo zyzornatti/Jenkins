@@ -24,7 +24,6 @@ pipeline {
       }
       steps {
         sh 'mysql --version'
-        sh 'select * from master'
       }
     }
   }
