@@ -15,6 +15,7 @@ pipeline {
       }
       steps {
         sh 'node --version'
+        echo 'Hello World'
       }
     }
     stage('DB') {
@@ -23,6 +24,7 @@ pipeline {
       }
       steps {
         sh 'mysql --version'
+        sh 'select * from master'
       }
     }
   }
