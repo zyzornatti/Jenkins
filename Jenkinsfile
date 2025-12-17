@@ -14,8 +14,12 @@ pipeline {
         docker { image 'node:18-alpine' }
       }
       steps {
-        sh 'node --version',
-        echo 'Hello World'
+        script{
+               sh '''
+               echo 'node --version'
+               echo 'Hello World'
+                '''
+           }        
       }
     }
     stage('DB') {
